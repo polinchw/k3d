@@ -16,6 +16,13 @@ k3d cluster create --config k3d.yaml
 kub apply -f storageclass.yaml
 ```
 
+### Label the nodes
+
+```angular2html
+ kub label node k3d-mycluster-agent-1 nodetype=standard
+ kub label node k3d-mycluster-agent-0 nodetype=pod
+```
+
 ### Start/Stop the cluster
 
 Once the cluster is created it will run and we restarted when your PC is restarted.
