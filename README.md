@@ -25,7 +25,7 @@ kub apply -f storageclass.yaml
 
 ### Start/Stop the cluster
 
-Once the cluster is created it will run and we restarted when your PC is restarted.
+Once the cluster is created it will run and will restart when your PC is restarted.
 
 #### Start
 
