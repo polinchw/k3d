@@ -38,3 +38,9 @@ k3d cluster start mycluster
 ```angular2html
 k3d cluster stop mycluster
 ```
+
+#### Disable Traefik
+
+```
+k3d cluster create --k3s-server-arg "--no-deploy" --k3s-server-arg "traefik" 
+```
