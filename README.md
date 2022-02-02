@@ -42,5 +42,5 @@ k3d cluster stop mycluster
 #### Disable Traefik
 
 ```
-k3d cluster create --k3s-server-arg "--no-deploy" --k3s-server-arg "traefik" 
+k3d cluster create --config k3d.yaml --k3s-arg "--disable=traefik@server:0" 
 ```
