@@ -45,8 +45,15 @@ k3d cluster stop mycluster
 k3d cluster create --config k3d.yaml --k3s-arg "--disable=traefik@server:0" 
 ```
 
+##### Replace Traefik with Nginx
+
+```
+helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx   --namespace ingress-nginx --create-namespace -f nginx-values.yaml  --version=v3.29.0
+```
+
 ### Kubernetes Cluster Help
 
 #### To add DNS records to a cluster's coredns follow the instructions here:
 
 [https://coredns.io/2017/05/08/custom-dns-entries-for-kubernetes/](https://coredns.io/2017/05/08/custom-dns-entries-for-kubernetes/)
+

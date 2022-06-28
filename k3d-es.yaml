@@ -1,0 +1,18 @@
+# k3d configuration file, saved as e.g. /home/me/myk3dcluster.yaml
+apiVersion: k3d.io/v1alpha2 # this will change in the future as we make everything more stable
+kind: Simple # internally, we also have a Cluster config, which is not yet available externally
+name: elasticsearch # name that you want to give to your cluster (will still be prefixed with `k3d-`)
+servers: 1 # same as `--servers 1`
+agents: 3 # same as `--agents 2`
+ports:
+  - port: 8082:80 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
+labels:
+  - label: nodetype=standard
+    nodeFilters:
+      - agent[*]
+env:
+  - envVar: bar=baz # same as `--env 'bar=baz@server[0]'`
+    nodeFilters:
+      - server[0]
