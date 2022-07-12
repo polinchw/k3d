@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: kibana-gateway
-  namespace: elasticsearch
+  namespace: kibana
 spec:
   selector:
     istio: ingressgateway
