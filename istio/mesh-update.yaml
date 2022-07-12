@@ -15,4 +15,4 @@ spec:
         headersToUpstreamOnAllow:
         - authorization
         headersToDownstreamOnDeny:
-        - set-cookie
+        - set-cookiecd
