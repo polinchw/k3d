@@ -7,7 +7,7 @@ Install a k3s Kubernetes cluster with k3d.
 ### Create cluster
 
 ```angular2html
-k3d cluster create --config k3d.yaml
+k3d cluster create mycluster --config k3d.yaml
 ```
 
 ### Apply the Storage class
