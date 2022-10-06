@@ -42,7 +42,7 @@ k3d cluster stop mycluster
 #### Disable Traefik
 
 ```
-k3d cluster create --config k3d.yaml --k3s-arg "--disable=traefik@server:0" 
+k3d cluster create mycluster --config k3d.yaml --k3s-arg "--disable=traefik@server:0" 
 ```
 
 ##### Replace Traefik with Nginx
